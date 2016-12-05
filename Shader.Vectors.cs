@@ -1,3 +1,5 @@
+#pragma warning disable
+
 public abstract partial class Shader
 {
     protected struct bvec2
@@ -416,3 +418,5 @@ public abstract partial class Shader
         public extern static dvec4 operator /(dvec4 left, dvec4 right);
     }
 }
+
+#pragma warning restore

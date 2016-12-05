@@ -1,5 +1,3 @@
-using System;
-
 public abstract partial class Shader
 {
     protected struct DepthRangeParameters
@@ -17,7 +15,13 @@ public abstract partial class Shader
     // protected abstract void main(); 
 }
 
-public abstract class VertexShader : Shader
+/*
+ * Base class where glsl noise functions are attached that vertex, 
+ * fragment and geometry shaders can access.
+ */
+public abstract partial class RenderShader : Shader {}
+
+public abstract class VertexShader : RenderShader
 {
     // built-in variables
     [In] protected readonly int gl_VertexId;
@@ -48,7 +52,7 @@ public abstract class TessellationEvaluationShader : Shader
     [Out] protected float[] gl_ClipDistance;
 }
 
-public abstract class GeometryShader : Shader
+public abstract partial class GeometryShader : RenderShader
 {
     // built-in variables
     [In] protected readonly int gl_PrimitiveIDIn;
@@ -61,7 +65,7 @@ public abstract class GeometryShader : Shader
     [Out] protected int gl_ViewportIndex;
 }
 
-public abstract class FragmentShader : Shader
+public abstract partial class FragmentShader : RenderShader
 {
     // built-in variables
     [In] protected readonly vec4 gl_FragCoord;
