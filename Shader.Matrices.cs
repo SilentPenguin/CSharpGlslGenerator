@@ -1,3 +1,5 @@
+#pragma warning disable
+
 public abstract partial class Shader
 {
     protected struct mat2
@@ -69,4 +71,36 @@ public abstract partial class Shader
         public extern static vec4 operator *(mat4 left, vec4 right);
         public extern static vec4 operator *(vec4 left, mat4 right);
     }
+
+    protected struct mat2x3
+    {
+
+    }
+
+    protected struct mat2x4
+    {
+        
+    }
+
+    protected struct mat3x2
+    {
+        
+    }
+
+    protected struct mat3x4
+    {
+        
+    }
+
+    protected struct mat4x2
+    {
+        
+    }
+
+    protected struct mat4x3
+    {
+        
+    }
 }
+
+#pragma warning restore
