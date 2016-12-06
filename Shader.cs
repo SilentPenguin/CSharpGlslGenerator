@@ -12,6 +12,26 @@ public abstract partial class Shader
     // gl 4.2 only
     [Uniform] protected readonly int gl_NumSamples;
 
+    // built in constants with their minimum values
+    protected const int gl_MaxClipDistances = 8;
+    protected const int gl_MaxClipPlanes = 8;
+    protected const int gl_MaxDrawBuffers = 8;
+    protected const int gl_MaxTextureUnits = 2;
+    protected const int gl_MaxTextureCoords = 2;
+    protected const int gl_MaxGeometryTextureImageUnits = 16;
+    protected const int gl_MaxTextureImageUnits = 16;
+    protected const int gl_MaxVertexAttribs = 16;
+    protected const int gl_MaxVertexTextureImageUnits = 16;
+    protected const int gl_MaxCombinedTextureImageUnits = 48;
+    protected const int gl_MaxGeometryVaryingComponents = 64;
+    protected const int gl_MaxVaryingComponents = 64;
+    protected const int gl_MaxVaryingFloats = 64;
+    protected const int gl_MaxGeometryOutputVertices = 256;
+    protected const int gl_MaxFragmentUniformComponents = 1024;
+    protected const int gl_MaxGeometryTotalOutputComponents = 1024;
+    protected const int gl_MaxGeometryUniformComponents = 1024;
+    protected const int gl_MaxVertexUniformComponents = 1024;
+
     // protected abstract void main(); 
 }
 
