@@ -73,6 +73,8 @@ public abstract partial class Shader
         public extern static ivec2 operator -(ivec2 left, ivec2 right);
         public extern static ivec2 operator *(ivec2 left, ivec2 right);
         public extern static ivec2 operator /(ivec2 left, ivec2 right);
+
+        public extern static implicit operator vec2(ivec2 v);
         
         public extern ivec2 xx { get; set; }
         public extern ivec2 xy { get; set; }
@@ -124,6 +126,8 @@ public abstract partial class Shader
         public extern static uivec2 operator -(uivec2 left, uivec2 right);
         public extern static uivec2 operator *(uivec2 left, uivec2 right);
         public extern static uivec2 operator /(uivec2 left, uivec2 right);
+
+        public extern static implicit operator vec2(uivec2 v);
         
         public extern uivec2 xx { get; set; }
         public extern uivec2 xy { get; set; }
@@ -429,6 +433,8 @@ public abstract partial class Shader
         public extern static ivec3 operator *(ivec3 left, ivec3 right);
         public extern static ivec3 operator /(ivec3 left, ivec3 right);
 
+        public extern static implicit operator vec3(ivec3 v);
+
         public extern ivec2 xx { get; set; }
         public extern ivec2 xy { get; set; }
         public extern ivec2 xz { get; set; }
@@ -573,6 +579,8 @@ public abstract partial class Shader
         public extern static uivec3 operator -(uivec3 left, uivec3 right);
         public extern static uivec3 operator *(uivec3 left, uivec3 right);
         public extern static uivec3 operator /(uivec3 left, uivec3 right);
+
+        public extern static implicit operator vec3(uivec3 v);
 
         public extern uivec2 xx { get; set; }
         public extern uivec2 xy { get; set; }
@@ -1388,6 +1396,8 @@ public abstract partial class Shader
         public extern static ivec4 operator -(ivec4 left, ivec4 right);
         public extern static ivec4 operator *(ivec4 left, ivec4 right);
         public extern static ivec4 operator /(ivec4 left, ivec4 right);
+
+        public extern static implicit operator vec4(ivec4 v);
         
         public extern ivec2 xx { get; set; }
         public extern ivec2 xy { get; set; }
@@ -1759,6 +1769,8 @@ public abstract partial class Shader
         public extern static uivec4 operator -(uivec4 left, uivec4 right);
         public extern static uivec4 operator *(uivec4 left, uivec4 right);
         public extern static uivec4 operator /(uivec4 left, uivec4 right);
+
+        public extern static implicit operator vec4(uivec4 v);
 
         public extern uivec2 xx { get; set; }
         public extern uivec2 xy { get; set; }
