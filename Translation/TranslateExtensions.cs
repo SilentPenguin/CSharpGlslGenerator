@@ -54,6 +54,8 @@ namespace GlslGenerator.Translation
                     return Translate(node as cs.IdentifierNameSyntax);
                 case SyntaxKind.MultiplyExpression:
                     return Translate(node as cs.BinaryExpressionSyntax);
+                case SyntaxKind.InvocationExpression:
+                    return Translate(node as cs.InvocationExpressionSyntax);
                 default:
                     return null;
             }
@@ -252,6 +254,14 @@ namespace GlslGenerator.Translation
                 node.Left.Translate(),
                 node.OperatorToken,
                 node.Right.Translate()
+            );
+        }
+
+        public static glsl.InvocationExpressionSyntax Translate(this cs.InvocationExpressionSyntax node)
+        {
+            return new glsl.InvocationExpressionSyntax().Update(
+                node.Expression.Translate(),
+                node.ArgumentList.Translate()
             );
         }
     }
