@@ -7,6 +7,6 @@ void main()
 {
 mat4 world = mat4(0.25f);
 world[3] = vec4(0, 0, 0, 1);
-gl_Position = world * in_transform * vec4(in_vertex, 1);
+gl_Position = world * inverse(in_transform) * vec4(in_vertex, 1);
 vert_color = vec4(in_color, 1);
 }
