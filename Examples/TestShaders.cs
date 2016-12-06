@@ -34,10 +34,10 @@ public class ExampleVertexShader : VertexShader
 
 	void main()
 	{
-        var world = new mat4(0.25f);
-        world[3] = new vec4(0, 0, 0, 1);
-        gl_Position = world * in_transform * new vec4(in_vertex, 1);
-        vert_color = new vec4(in_color, 1);
+		var world = new mat4(0.25f);
+		world[3] = new vec4(0, 0, 0, 1);
+		gl_Position = world * in_transform * new vec4(in_vertex, 1);
+		vert_color = new vec4(in_color, 1);
 	}
 }
 
